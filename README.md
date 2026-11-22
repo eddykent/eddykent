@@ -10,8 +10,8 @@ Mostly at a UK utility infrastructure company, 2015 to 2026:
 
 - **An engineer scheduling optimiser.** I designed and built it solo in C++ using Guided Variable Neighbourhood Search, with time windows and skills constraints for engineers across the UK. It cut driving time by up to 30%, roughly **£2M a year**. It ran behind a REST service, with a web UI for tuning the heuristics and inspecting schedules.
 - **A UK road-network distance matrix** (C++, Boost). I built a directed graph from OpenStreetMap and snapped postcodes to it with a kd-tree. One-to-many Dijkstra then produced a 9-million-entry travel-time matrix in 30 minutes. Routes between near-identical postcodes are fuzzy-matched from a PostgreSQL cache, so the cache never grew to billions of rows.
-- **A utility network design portal** for gas, electricity and district heating. You draw a network on the map, press *Design*, and graph algorithms size every pipe, cable and asset from source to demand, flagging loops and invalid connections on the way. Built on OpenLayers, MapServer, PostgreSQL and PostGIS. I was team lead, then tech lead, in the GIS team.
-- **On-device machine learning.** I trained a TensorFlow model to spot gas-meter fitting defects in site photos, then converted it to TensorFlow Lite so it runs offline on engineers' tablets.
+- **A utility network design portal** for gas, electricity and district heating. You draw a network on the map, press *Design*, and graph algorithms size every pipe, cable and asset from source to demand, flagging loops and invalid connections on the way. Rewriting the graph builder as recursive SQL in a single database call took it from about 10 minutes to about 10 milliseconds. Built on OpenLayers, MapServer, PostgreSQL and PostGIS. I was team lead, then tech lead, in the GIS team.
+- **On-device machine learning.** I trained a TensorFlow model to spot gas-meter fitting defects in site photos, then converted it to TensorFlow Lite so it could run offline on engineers' tablets.
 
 ### Quant projects
 
